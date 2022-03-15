@@ -18,10 +18,8 @@ const db = knex({
   //   database : 'smart-brain' //Here the name of the database
   // }
   connection: {
-    host : 'postgresql-animated-74480', //This means localhost 
-    user : 'amr', //Here you need to enter the name of user in Database
-    password : 'CITad3llePOSTGRES', //This is the password to my Database
-    database : 'smart-brain' //Here the name of the database
+    host : process.env.DATABASE_URL, //This means localhost 
+    ssl: true
   }
 });
 
